@@ -6,12 +6,10 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
 public class ClassicalMusic implements Music {
     private List<String> songList = new ArrayList<>();
 
-    @Autowired
-    private ClassicalMusic() {
+    public ClassicalMusic() {
         songList.add("Toccata and Fugue in D minor");
         songList.add("Nocturne No. 2 in E flat Major");
         songList.add("Moonlight Sonata");

@@ -1,6 +1,6 @@
 package ru.khismatullin.springcourse;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Scanner;
 
@@ -19,8 +19,8 @@ public class TestSpring {
             default: System.out.println("Неправильный выбор! Значит джаз!"); musicGenre = MusicGenre.JAZZ;
         }
 
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
 
         MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);

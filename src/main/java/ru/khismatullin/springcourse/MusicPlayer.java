@@ -11,12 +11,10 @@ import java.util.Random;
 import static ru.khismatullin.springcourse.MusicGenre.CLASSICAL;
 import static ru.khismatullin.springcourse.MusicGenre.JAZZ;
 
-@Component
 public class MusicPlayer {
     private ClassicalMusic classicalMusic;
     private JazzMusic jazzMusic;
 
-    @Autowired
     public MusicPlayer(ClassicalMusic classicalMusic, JazzMusic jazzMusic) {
         this.classicalMusic = classicalMusic;
         this.jazzMusic = jazzMusic;
